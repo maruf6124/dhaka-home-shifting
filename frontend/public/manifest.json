@@ -1,0 +1,9 @@
+{
+  "name": "Dhaka Home Shifting",
+  "short_name": "Home Shifting",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F6F7F5",
+  "theme_color": "#0F766E",
+  "icons": [{ "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}

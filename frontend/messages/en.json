@@ -1,0 +1,163 @@
+{
+  "meta": {
+    "title": "Dhaka Home Shifting — rent, shifting and cleaning",
+    "short": "Dhaka Home Shifting",
+    "description": "Find homes from verified landlords and unlock the address and chat for 1 diamond. No brokers."
+  },
+  "common": { "language": "Language", "home": "Home", "error": "Something went wrong, please try again", "close": "Close", "cancel": "Cancel", "back": "Back" },
+  "nav": {
+    "brand": "Dhaka Home Shifting", "services": "Services", "rent": "House Rent", "shifting": "Shifting & Truck", "goods": "Buy, Sell & Donate", "cleaning": "Cleaning",
+    "balance": "Diamond balance {n}", "messages": "Messages", "notifications": "Notifications", "account": "Account menu", "dashboard": "My dashboard",
+    "wallet": "Wallet", "becomeProvider": "Become a provider (KYC)", "admin": "Admin panel", "logout": "Log out", "login": "Log in / Sign up",
+    "mobileNav": "Bottom menu", "home": "Home", "search": "Search", "post": "New post", "profile": "Profile"
+  },
+  "home": {
+    "badge": "Verified landlords · No brokers",
+    "title": "From finding a home to settling in — all in one place",
+    "subtitle": "Browse rental homes for free. Like one? Unlock the full address, phone number and chat for just 1 diamond.",
+    "type": "Type", "any": "Any", "entireFlat": "Entire flat", "sublet": "Sublet", "area": "Area", "allDhaka": "All of Dhaka", "budget": "Budget", "upTo": "Up to ৳{n}", "search": "Search",
+    "journeyTitle": "Your moving journey", "j1": "Find a home", "j2": "Book a truck and labour", "j3": "Sell or donate old items", "j4": "Get the new home cleaned", "startRent": "Start looking for a home",
+    "svc": {
+      "rent": { "title": "House Rent", "desc": "Entire flats and sublets — landlords verified with NID and utility bill" },
+      "shifting": { "title": "Shifting & Truck", "desc": "Post a free request and compare driver prices (coming soon)" },
+      "goods": { "title": "Buy, Sell & Donate", "desc": "Sell old furniture or give it to someone in need (coming soon)" },
+      "cleaning": { "title": "Cleaning", "desc": "Deep clean, kitchen, sofa and water tank (coming soon)" }
+    },
+    "latest": "Newly posted homes", "seeAll": "See all →", "howTitle": "How it works",
+    "h1": { "title": "Browse for free", "desc": "Photos, rent, rooms and area cost nothing to see." },
+    "h2": { "title": "Unlock with 1 diamond", "desc": "Like it? Unlock the full address, phone and chat. 5 bonus diamonds on sign-up." },
+    "h3": { "title": "Talk directly", "desc": "No commission. Diamond refunded if the home was already rented." },
+    "footer": "Dhaka Home Shifting — VRCT project", "footerNote": "No other user can see your NID or personal details"
+  },
+  "listing": {
+    "verified": "Verified", "type": { "entire_flat": "Entire flat", "sublet": "Sublet" }, "perMonth": "/month", "roomsBaths": "{rooms} bed, {baths} bath",
+    "tenant": { "family": "Family", "bachelor": "Bachelor", "female": "Women only", "any": "Anyone" },
+    "rent": "House Rent", "rooms": "Bedrooms", "baths": "Bathrooms", "sqft": "Sq ft", "floor": "Floor", "tenantFor": "Suitable for", "serviceCharge": "Service charge", "advance": "Advance", "amenities": "Amenities",
+    "amenity": { "lift": "Lift", "gas": "Gas line", "generator": "Generator", "parking": "Parking", "cctv": "CCTV", "guard": "Guard" }
+  },
+  "auth": {
+    "hero": "Moving into a new home just got easier", "b1": "Landlords verified with NID and utility bill — no brokers", "b2": "Chat directly as soon as you unlock", "b3": "Verify your email and get 5 bonus diamonds",
+    "privacy": "No other user can see your NID or personal details.", "tab": { "login": "Log in", "signup": "Sign up" },
+    "networkError": "Can't reach the server. Please try again shortly.", "mustAgree": "Please accept the terms",
+    "login": { "title": "Welcome back", "subtitle": "Logging in from a new device? We'll email you a code", "submit": "Log in" },
+    "signup": { "title": "Create an account", "subtitle": "Verify your email to get 5 bonus diamonds", "submit": "Send OTP to email" },
+    "forgot": { "title": "Reset password", "subtitle": "We will email you a 6-digit code", "submit": "Send code" },
+    "backToLogin": "Back to log in", "name": "Full name", "email": "Email", "phone": "Mobile number", "phoneHint": "Only one account per number", "password": "Password", "passwordHint": "At least 8 characters",
+    "forgotLink": "Forgot password?", "agree": "I agree to the Terms, Privacy Policy and Refund Policy", "wait": "Please wait…",
+    "otp": { "signup": "Verify your email", "login": "New device — confirm your log in", "reset": "Enter the code to change password" },
+    "otpSent": "We sent a 6-digit code to {email}. It expires in 10 minutes.", "code": "6-digit code", "newPassword": "New password",
+    "bonusHint": "5 bonus diamonds go to your wallet as soon as you verify.", "savePassword": "Save password", "verify": "Verify", "changeEmail": "Change email",
+    "resendIn": "Resend in {s}s", "resend": "Resend code", "lockout": "After 5 wrong attempts the code stops working — request a new one",
+    "done": { "signup": "Account verified!", "login": "Logged in", "reset": "Password changed" },
+    "bonusAdded": "5 bonus diamonds were added to your wallet — unlock 5 homes for free.", "goLogin": "Log in", "continue": "Continue"
+  },
+  "rent": {
+    "title": "House Rent", "subtitle": "Browsing is free · 1 diamond to see the address and contact", "postSublet": "Post a sublet", "postFlat": "Post a flat",
+    "filters": "Filters", "clear": "Clear", "area": "Area", "allDhaka": "All of Dhaka", "minRent": "Min rent", "maxRent": "Max rent", "rooms": "Bedrooms", "tenantType": "Suitable for",
+    "verifiedOnly": "Verified landlords only", "count": "{n} homes", "unlockNote": "addresses locked", "sort": "Sort", "newest": "Newest", "priceAsc": "Lowest rent", "priceDesc": "Highest rent",
+    "empty": "No homes match these filters", "emptyHint": "Try another area or rent range.", "pagination": "Pages", "prev": "Previous", "next": "Next"
+  },
+  "detail": {
+    "unlockedFlash": "Unlocked! See the address and phone, and start chatting.",
+    "status": { "rented": "This home has been rented.", "expired": "This post has expired.", "hidden": "This post is under review after reports.", "removed": "This post was removed." },
+    "photoAlt": "Home photo {n}", "verifiedLandlord": "Verified landlord", "posted": "Posted {when}", "availableFrom": "Available from {date}", "description": "Description", "months": "{n} months",
+    "ownerInitial": "L", "poster": "Posted by", "landlord": "Landlord", "rating": "★ {avg} · {n} reviews", "noReviews": "No reviews yet",
+    "rateTitle": "How was your experience?", "reviewThanks": "Thanks for your review!", "sendReview": "Send review",
+    "yourPrivate": "Only you and unlockers can see this", "unlocked": "Unlocked", "address": "Road {road}, House {house}, {area}", "locked": "Address and phone are locked",
+    "ownerStats": "{u} people unlocked · {r} open reports", "edit": "Edit post", "markedRented": "Marked as rented", "markRented": "Mark as rented",
+    "reactivate": "Make active again", "renewed": "Extended by 30 days", "renew": "Renew for free",
+    "deleteConfirm": "Delete this post? Anyone who unlocked it in the last 24 hours gets their diamond back.", "delete": "Delete post",
+    "chat": "Chat", "call": "Call", "unlockCta": "Unlock address & chat for {n} diamond",
+    "refundNote": "You get the diamond back if the home was already rented, the post is proven fake, or there's no reply within 48 hours.", "report": "Report",
+    "confirmTitle": "This costs {n} diamond", "confirmBalance": "Balance: {from} → {to}", "confirm1": "Shows the full address, phone number and live chat", "confirm2": "Refunded if the conditions are met",
+    "buyDiamonds": "Buy diamonds", "confirmUnlock": "Confirm and unlock", "reportTitle": "Why are you reporting this?",
+    "reason": { "already_rented": "Already rented", "fake": "Fake post / wrong photos", "scam": "Asking for advance money / scam", "no_reply": "Not replying", "abuse": "Abusive behaviour", "other": "Something else" },
+    "reportNote": "Short note (optional)", "reported": "Report sent. Thank you.", "sendReport": "Send report"
+  },
+  "post": {
+    "editTitle": "Edit post", "title": "Post a home", "subtitle": "Posting is free. Renew for free after 30 days.", "kind": "What are you posting?",
+    "kindHint": { "entire_flat": "Verified landlords only", "sublet": "Any user" },
+    "needLandlord": "To post an entire flat, you first need to be verified as a landlord.", "becomeLandlord": "Verify with NID and bill →",
+    "s1": "Price and area", "area": "Area", "chooseArea": "Choose an area", "rent": "Monthly rent (৳)", "serviceCharge": "Service charge (৳)", "advance": "Advance", "months": "{n} months", "availableFrom": "Available from",
+    "s2": "About the home", "titleField": "Title", "titleHint": "e.g. 3-bed family flat, Mirpur-10", "description": "Details", "contactWarning": "Phone numbers, emails or links are removed automatically",
+    "s3": "Photos (up to 8)", "removePhoto": "Remove photo", "uploading": "Uploading…", "addPhoto": "Add photos", "photoHint": "Photos are shrunk before upload to save your data.",
+    "s4": "Private — only people who unlock can see this", "road": "Road number", "house": "House number", "phone": "Contact number",
+    "rule1": "Mark the home as rented when it's taken — otherwise unlockers get refunds.", "rule2": "Proven fake posts get a warning; 3 warnings suspend the account.",
+    "saving": "Saving…", "save": "Save changes", "publish": "Publish post", "uploadFailed": "Photo upload failed", "failed": "Could not save the post"
+  },
+  "wallet": {
+    "title": "Wallet", "total": "Total diamonds", "paid": "Bought", "bonus": "Bonus", "bonusFirst": "Bonus diamonds are spent first.", "choose": "Choose a package",
+    "pkg": { "starter": "Starter", "popular": "Popular", "value": "Value", "provider": "Provider" }, "diamonds": "{n} diamonds", "per": "৳{v} each",
+    "bkash": "bKash", "nagad": "Nagad", "howTo": "Send <b>{amount}</b> using <b>\"Payment\"</b> (not \"Send Money\") to this merchant number: <b>{number}</b>. Then enter the TrxID below — an admin checks it and adds your diamonds.",
+    "trx": "Transaction ID (TrxID)", "sender": "Number you paid from", "send": "Send top-up request", "pending": "Pending: {trx} ({n} diamonds)",
+    "submitted": "Request sent. You'll get a notification once it's checked.", "history": "Transaction history", "noHistory": "No transactions yet",
+    "kind": { "purchase": "Top-up", "bonus": "Bonus", "gift": "Gift", "unlock": "Unlock", "quote": "Quote", "refund": "Refund", "admin_adjust": "Admin adjustment" },
+    "freeTitle": "Free bonus request", "freeRule": "When your balance is 0, you can ask the admin for bonus diamonds once every {d} days.", "freeReason": "Briefly, why do you need it?",
+    "freeSend": "Send request", "freeNotNow": "Not available now — you still have diamonds.", "freeSent": "Request sent."
+  },
+  "chat": {
+    "conversations": "Conversations", "title": "Messages", "empty": "No chats yet", "emptyHint": "A chat opens when you unlock a home.", "browse": "Find a home", "noMessages": "No messages yet",
+    "chat": "Chat", "status": { "online": "Live", "connecting": "Connecting…", "offline": "Reconnecting…" }, "unblock": "Unblock", "block": "Block",
+    "opened": "Chat opened with a diamond unlock", "blockedMsg": "Messaging is turned off in this chat.", "message": "Message", "placeholder": "Write a message…", "send": "Send", "pick": "Pick a conversation on the left"
+  },
+  "dash": {
+    "client": "Client", "role": { "landlord": "Landlord", "driver": "Driver", "cleaner": "Cleaner", "admin": "Admin" },
+    "kyc": { "none": "Not started", "pending": "Under review", "verified": "Verified", "rejected": "Rejected" }, "addRole": "Add a role", "balance": "{n} diamonds",
+    "reportsWaiting": "Your posts have {n} reports — see the Reports tab.", "tab": { "posts": "My posts", "unlocks": "Unlocked", "reports": "Reports" },
+    "noPosts": "You have no posts", "newPost": "New post", "status": { "active": "Active", "rented": "Rented", "expired": "Expired", "hidden": "Under review", "removed": "Removed" },
+    "expires": "Expires {d}", "markRented": "Mark as rented", "reactivate": "Make active", "renew": "Renew free", "edit": "Edit", "updated": "Updated", "renewed": "Renewed",
+    "noUnlocks": "You haven't unlocked anything yet", "browse": "Find a home", "refunded": "Diamond refunded", "chat": "Chat", "claimRefund": "No reply — refund me", "refundOk": "Diamond refunded",
+    "noReports": "No reports on your posts",
+    "reason": { "already_rented": "Says the home was already rented", "fake": "Fake post", "scam": "Scam", "no_reply": "Not replying", "abuse": "Abusive behaviour", "other": "Something else" },
+    "confirmRented": "Yes, it was already rented — refund them", "confirmedRented": "Thanks. The diamond was refunded and the post is marked rented."
+  },
+  "notif": { "title": "Notifications", "readAll": "Mark all read", "empty": "No notifications", "unread": "Unread" },
+  "kyc": {
+    "title": "Become a service provider", "subtitle": "Once your documents are verified you get a verified badge and can post.", "whichRole": "Which role?",
+    "role": { "landlord": "Landlord", "driver": "Driver", "cleaner": "Cleaning team" }, "status": { "none": "Not started", "pending": "Under review", "verified": "Verified", "rejected": "Rejected" },
+    "comingNote": "Shifting and cleaning services launch soon. You can get verified now.", "rejectedNote": "Rejected because: {note} — please fix and submit again.",
+    "docs": "Required documents",
+    "doc": { "nid_front": "NID (front)", "nid_back": "NID (back)", "utility_bill": "Electricity/gas bill or holding tax", "driving_license": "Driving licence", "vehicle_registration": "Vehicle registration and number plate", "team_photo": "Team and past work photos" },
+    "fileHint": "jpg, png, webp or pdf · up to 5 MB", "uploading": "Uploading…", "replace": "Replace", "upload": "Upload",
+    "privacy": "Documents are kept private and only admins see them for verification. Rejected documents are deleted after 30 days.",
+    "submit": "Submit for review", "uploadAll": "Upload all documents", "submitted": "Submitted! Reviews usually take 1–2 days.",
+    "pendingNote": "Your documents are being reviewed. You'll get a notification.", "verifiedNote": "You are verified for this role."
+  },
+  "soon": {
+    "shifting": { "title": "Shifting & Truck", "desc": "Post a free request — verified drivers send quotes with prices. Launching in the next phase." },
+    "goods": { "title": "Buy, Sell & Donate", "desc": "Sell old items before moving or give them to someone in need. Launching in the next phase." },
+    "cleaning": { "title": "Cleaning", "desc": "Deep clean, kitchen, sofa and water tank — verified teams with package rates. Launching in the next phase." },
+    "badge": "Coming soon", "cta": "Find a home now"
+  },
+  "admin": {
+    "menu": "Admin menu", "title": "Admin",
+    "nav": { "dashboard": "Dashboard", "kyc": "KYC review", "payments": "Payments & bonus", "reports": "Reports", "users": "Users", "settings": "Settings & prices", "audit": "Audit log" },
+    "stat": { "users": "Total users", "providers": "Verified providers", "listings": "Active posts", "revenue": "30-day revenue" },
+    "chart": "Diamonds sold per day (14 days)", "chartAlt": "Bar chart of diamonds sold per day over the last 14 days", "today": "Today",
+    "q": { "kyc": "Pending KYC", "payments": "Payment & bonus requests", "reports": "Open reports" },
+    "kyc": { "approved": "Approved", "rejected": "Rejected", "empty": "No applications", "checklist": "Check: does the NID name match the bill name, and are the photos clear?", "notePh": "Note (the user sees it if rejected)", "approve": "Approve and give badge" },
+    "reject": "Reject", "approve": "Approve", "note": "Note", "never": "Never",
+    "pay": {
+      "hint": "Match the TrxID in the bKash/Nagad merchant app before approving", "tab": { "pay": "Payments", "free": "Free bonus", "gift": "Send gift" },
+      "empty": "No pending payments", "emptyFree": "No bonus requests",
+      "col": { "user": "User", "package": "Package", "method": "Method", "trx": "TrxID & sender", "time": "Time" },
+      "rejected": "Rejected", "approved": "Approved — diamonds added", "lastBonus": "Last bonus", "amount": "Amount (max {max})",
+      "gifted": "Gift sent", "giftUser": "User's email or mobile", "giftAmount": "Diamonds", "giftReason": "Reason (saved in the audit log)", "giftSend": "Send gift"
+    },
+    "rep": {
+      "confirmed": "Post removed, {n} people refunded", "dismissed": "Reports dismissed — post active again", "hint": "3 reports hide a post automatically; you make the final decision and refunds",
+      "empty": "No open reports", "owner": "Owner: {name} (warnings {w})", "unlockers": "{n} unlocked", "count": "{n} reports",
+      "effect": "Confirming removes the post, refunds {n} unlockers and gives the owner a warning.", "dismiss": "Dismiss — keep the post", "confirm": "Confirm and refund"
+    },
+    "users": { "search": "Name, email or mobile", "find": "Search", "col": { "name": "User", "roles": "Roles", "balance": "Balance", "joined": "Joined" }, "banned": "Banned", "unban": "Unban", "ban": "Ban" },
+    "set": {
+      "saved": "Saved", "hint": "Change prices and rules without touching code · every change goes to the audit log", "save": "Save changes", "packages": "Diamond packages",
+      "name": "Name", "diamonds": "Diamonds", "price": "Price (৳)", "active": "On", "costs": "Unlock and quote costs",
+      "cost": { "rent": "Home unlock", "truck": "Truck unlock", "sell": "Item for sale", "donate": "Donation request", "cleaning": "Cleaning unlock", "quote": "Provider quote" },
+      "rules": "Bonus, expiry and refunds", "welcome_bonus": "Welcome bonus", "free_bonus_max": "Free bonus max", "free_bonus_cooldown_days": "Bonus cooldown (days)",
+      "report_hide_threshold": "Reports before auto-hide", "rent_expiry_days": "Home post lifetime (days)", "no_reply_refund_hours": "No-reply refund (hours)",
+      "delete_refund_hours": "Delete refund window (hours)", "warnings_before_ban": "Warnings before ban", "numbers": "Payment numbers"
+    },
+    "audit": { "time": "Time", "admin": "Admin", "action": "Action", "details": "Details" }
+  }
+}
