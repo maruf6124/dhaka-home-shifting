@@ -1,3 +1,4 @@
+import ssl
 from collections.abc import AsyncIterator
 from datetime import datetime, timezone
 
@@ -8,12 +9,18 @@ from app.core.config import get_settings
 
 settings = get_settings()
 
-_engine_kwargs: dict = {"pool_pre_ping": True}
-if not settings.is_sqlite:
-    # Free MySQL tiers allow few connections and close idle ones.
-    _engine_kwargs.update(pool_size=settings.db_pool_size, max_overflow=2, pool_recycle=280)
+def engine_kwargs() -> dict:
+    kwargs: dict = {"pool_pre_ping": True}
+    if not settings.is_sqlite:
+        # Free MySQL tiers allow few connections and close idle ones.
+        kwargs.update(pool_size=settings.db_pool_size, max_overflow=2, pool_recycle=280)
+        if settings.db_ssl:
+            # TiDB Cloud and Aiven only accept encrypted connections.
+            kwargs["connect_args"] = {"ssl": ssl.create_default_context()}
+    return kwargs
 
-engine = create_async_engine(settings.database_url, **_engine_kwargs)
+
+engine = create_async_engine(settings.database_url, **engine_kwargs())
 SessionLocal = async_sessionmaker(engine, expire_on_commit=False, class_=AsyncSession)
 
 

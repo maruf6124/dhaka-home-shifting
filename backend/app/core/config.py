@@ -14,6 +14,7 @@ class Settings(BaseSettings):
     # mysql+aiomysql://user:pass@host:3306/dbname?charset=utf8mb4
     database_url: str = "sqlite+aiosqlite:///./dev.db"
     db_pool_size: int = 5
+    db_ssl: bool = False  # set true for TiDB Cloud / Aiven
 
     # Security
     jwt_secret: str = "change-me-in-production"

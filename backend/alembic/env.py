@@ -3,7 +3,6 @@ from logging.config import fileConfig
 
 from sqlalchemy import pool
 from sqlalchemy.engine import Connection
-from sqlalchemy.ext.asyncio import async_engine_from_config
 
 from alembic import context
 
@@ -20,8 +19,7 @@ from app.core.config import get_settings  # noqa: E402
 from app.core.database import Base  # noqa: E402
 import app.models  # noqa: E402,F401  (registers the tables)
 
-# The database URL comes from DATABASE_URL / .env, not alembic.ini.
-config.set_main_option("sqlalchemy.url", get_settings().database_url)
+# The database URL (and SSL) come from DATABASE_URL / .env, not alembic.ini.
 target_metadata = Base.metadata
 
 # other values from the config, defined by the needs of env.py,
@@ -42,7 +40,7 @@ def run_migrations_offline() -> None:
     script output.
 
     """
-    url = config.get_main_option("sqlalchemy.url")
+    url = get_settings().database_url
     context.configure(
         url=url,
         target_metadata=target_metadata,
@@ -68,11 +66,14 @@ async def run_async_migrations() -> None:
 
     """
 
-    connectable = async_engine_from_config(
-        config.get_section(config.config_ini_section, {}),
-        prefix="sqlalchemy.",
-        poolclass=pool.NullPool,
-    )
+    from sqlalchemy.ext.asyncio import create_async_engine
+
+    from app.core.database import engine_kwargs
+
+    kwargs = engine_kwargs()
+    for key in ("pool_size", "max_overflow", "pool_recycle"):
+        kwargs.pop(key, None)
+    connectable = create_async_engine(get_settings().database_url, poolclass=pool.NullPool, **kwargs)
 
     async with connectable.connect() as connection:
         await connection.run_sync(do_run_migrations)
