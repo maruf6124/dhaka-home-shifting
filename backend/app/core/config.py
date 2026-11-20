@@ -33,8 +33,11 @@ class Settings(BaseSettings):
     # CORS: comma separated list of allowed frontend origins
     cors_origins: str = "http://localhost:3000"
 
-    # Email (Gmail SMTP with an App Password). If smtp_user is empty, emails are
-    # printed to the console instead (handy for local development).
+    # Email. Production uses the Brevo HTTP API (Render's free plan blocks SMTP
+    # ports). If brevo_api_key is empty, Gmail SMTP is used when smtp_user is set,
+    # otherwise emails are printed to the console (handy for local development).
+    brevo_api_key: str = ""
+    email_from: str = ""  # sender address (must be verified in Brevo)
     smtp_host: str = "smtp.gmail.com"
     smtp_port: int = 587
     smtp_user: str = ""

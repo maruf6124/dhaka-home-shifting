@@ -1,10 +1,17 @@
-"""Sending email through Gmail SMTP (free with an App Password).
+"""Sending email.
 
-Without SMTP settings the email is printed to the console, so the whole app
-can be tried locally. Call ``send_email`` from a FastAPI BackgroundTask.
+Order of preference:
+1. Brevo HTTP API (BREVO_API_KEY) - works on Render's free plan, which blocks
+   outbound SMTP ports 25/465/587.
+2. Gmail SMTP with an App Password (SMTP_USER) - fine for local/paid hosting.
+3. Console mode - the email is printed, so the whole app can be tried locally.
+
+Call ``send_email`` from a FastAPI BackgroundTask.
 """
 import logging
 import smtplib
+
+import httpx
 from email.message import EmailMessage
 from email.utils import formataddr
 
@@ -41,8 +48,32 @@ def render(template: str, lang: str, **values) -> tuple[str, str]:
     return subject.format(**values), body.format(**values)
 
 
+BREVO_URL = "https://api.brevo.com/v3/smtp/email"
+
+
+def _send_brevo(to: str, subject: str, body: str) -> None:
+    resp = httpx.post(
+        BREVO_URL,
+        headers={"api-key": settings.brevo_api_key, "accept": "application/json"},
+        json={
+            "sender": {"name": settings.email_from_name, "email": settings.email_from},
+            "to": [{"email": to}],
+            "subject": subject,
+            "textContent": body,
+        },
+        timeout=20,
+    )
+    resp.raise_for_status()
+
+
 def send_email(to: str, template: str, lang: str, **values) -> None:
     subject, body = render(template, lang, **values)
+    if settings.brevo_api_key:
+        try:
+            _send_brevo(to, subject, body)
+        except Exception:  # email must never break the request
+            log.exception("Failed to send email to %s via Brevo", to)
+        return
     if not settings.smtp_user:
         OUTBOX.append({"to": to, "template": template, "subject": subject, "body": body, **values})
         log.warning("EMAIL (console mode) to=%s subject=%s\n%s", to, subject, body)

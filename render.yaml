@@ -1,5 +1,5 @@
 # Render Blueprint: New → Blueprint → pick this repo. Render asks for the
-# values marked "sync: false" (database URL, website address, email, Cloudinary).
+# values marked "sync: false" (database URL, website address, Brevo key, Cloudinary).
 services:
   - type: web
     name: dhaka-home-shifting-api
@@ -36,10 +36,11 @@ services:
         sync: false
       - key: PUBLIC_BASE_URL
         sync: false
-      - key: SMTP_USER
+      # Email via Brevo HTTP API (free plan blocks SMTP ports)
+      - key: BREVO_API_KEY
         sync: false
-      - key: SMTP_PASSWORD
-        sync: false
+      - key: EMAIL_FROM
+        value: yiafimaruf@gmail.com
       - key: CLOUDINARY_CLOUD_NAME
         sync: false
       - key: CLOUDINARY_API_KEY

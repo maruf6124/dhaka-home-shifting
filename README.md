@@ -10,7 +10,7 @@
 | Backend | FastAPI, SQLAlchemy 2 (async), MySQL 8 / SQLite (টেস্ট), Alembic, WebSocket |
 | Frontend | Next.js 14 (App Router), Tailwind CSS, next-intl (বাংলা/English) |
 | ফাইল | Cloudinary (KYC ডকুমেন্ট `authenticated` — প্রাইভেট) |
-| ইমেইল | Gmail SMTP (App Password) |
+| ইমেইল | Brevo HTTP API (প্রোডাকশন), Gmail SMTP (ঐচ্ছিক, লোকাল) |
 
 ## লোকাল কম্পিউটারে চালানো
 
@@ -28,7 +28,7 @@ python -m scripts.create_admin --name "Admin" --email you@example.com --phone 01
 uvicorn app.main:app --reload --port 8000
 ```
 
-`SMTP_USER` খালি থাকলে OTP কোড ইমেইলে না গিয়ে **backend-এর টার্মিনালে** দেখা যাবে।
+`BREVO_API_KEY` ও `SMTP_USER` খালি থাকলে OTP কোড ইমেইলে না গিয়ে **backend-এর টার্মিনালে** দেখা যাবে।
 API ডকুমেন্টেশন: http://localhost:8000/docs
 
 ```bash
@@ -54,6 +54,7 @@ cd backend && python -m pytest -q
    - Build: `pip install -r requirements.txt`
    - Start: `alembic upgrade head && python -m scripts.seed && uvicorn app.main:app --host 0.0.0.0 --port $PORT --proxy-headers --forwarded-allow-ips="*"`
    - Environment: `.env.example`-এর সব ভ্যারিয়েবল; `ENVIRONMENT=production`, `COOKIE_SECURE=true`, `CORS_ORIGINS` ও `FRONTEND_URL` = Vercel ঠিকানা, `PUBLIC_BASE_URL` = Render ঠিকানা।
+   - ইমেইল: Render-এর ফ্রি প্ল্যানে SMTP পোর্ট বন্ধ, তাই Gmail SMTP কাজ করবে না। Brevo-র ফ্রি অ্যাকাউন্টে `EMAIL_FROM` ঠিকানাটা Sender হিসেবে ভেরিফাই করে API key নিন, তারপর `BREVO_API_KEY` বসান।
    - প্রথম অ্যাডমিন: Render Shell থেকে `python -m scripts.create_admin ...`
 3. **Frontend — Vercel:** Root directory `frontend`; Environment: `API_URL=https://<render-app>.onrender.com`, `NEXT_PUBLIC_WS_URL=wss://<render-app>.onrender.com`।
 4. **শিডিউলড জব — GitHub Actions:** রিপোর Settings → Secrets-এ `API_URL` ও `JOB_SECRET` দিন। `.github/workflows/jobs.yml` প্রতি ঘণ্টায় মেয়াদোত্তীর্ণ পোস্ট বন্ধ করবে।
